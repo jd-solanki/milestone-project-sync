@@ -1,0 +1,19 @@
+name: Milestone Project Sync
+description: Keep a GitHub Project board holding exactly the issues that have a milestone.
+author: JD Solanki
+branding:
+  icon: flag
+  color: blue
+inputs:
+  project-owner:
+    description: User or organization login that owns the project, from its URL
+    required: true
+  project-number:
+    description: Project number, from its URL
+    required: true
+  github-token:
+    description: Classic personal access token with the `project` scope, plus `repo` for private repositories
+    required: true
+runs:
+  using: node24
+  main: dist/index.mjs

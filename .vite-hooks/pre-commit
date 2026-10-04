@@ -1,0 +1,3 @@
+# The runner executes dist as committed, so each commit carries the build of its own source
+vp pack && git add dist
+vp staged
